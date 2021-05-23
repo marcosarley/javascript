@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dowhile.css"/>
+  <title>Do While</title>
+ </head>
+  <body>
+    <div id="numero">
+      <h1>Números ímpares</h1> 
+    </div>  
+     <img src="./numeros.jpg" width="300px" height="300px">
+      <script>
+      // solicita o número e repete a leitura enquanto inválido
+      do {
+        var num = Number(prompt("Número: "));
+        if (num == 0 || isNaN(num)) {
+          alert("Digite um número válido...");
+        }
+      } while (num == 0 || isNaN(num));
+    
+      // declara e inicializa variável que irá exibir pares
+      var impares = "Impares entre 1 e " + num + ": ";
+    
+      // isola o primeiro impar (para evitar última vírgula)
+      if (num > 1) {
+        impares = impares + "1";
+      }
+    
+      // laço para acumular impares (inicia em 4, pois o 2 já foi atribuído)
+      for (var i = 1; i <= num; i = i + 2) {
+        impares = impares + ", " + i;
+      }
+    
+      // exibe lista dos números impares
+      alert(impares);
+    
+      </script> 
+    
+  </body>
+</html>
+
+ 
