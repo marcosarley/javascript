@@ -1,7 +1,7 @@
 // declara vetor de escopo global que irá conter os números já apostados
 var erros = [];
 // gera um número aleatório entre 1 e 100
-var sorteado = Math.floor(Math.random() * 100) + 1;
+var sorteado = Math.floor(Math.random() * 50) + 1;
 // declara constante com o número de chances
 const CHANCES = 7;
 function apostarNumero() {
@@ -9,7 +9,7 @@ function apostarNumero() {
   var inNumero = document.getElementById("inNumero");
   var numero = Number(inNumero.value);
   // valida o número
-  if (numero <= 0 || numero > 100 || isNaN(numero)) {
+  if (numero <= 0 || numero > 50 || isNaN(numero)) {
     alert("Informe um número válido...");
     inNumero.focus();
     return;
